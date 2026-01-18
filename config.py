@@ -13,7 +13,7 @@ class Settings(BaseSettings):
 
     # Ollama
     OLLAMA_BASE_URL: str = "http://localhost:11434"
-    OLLAMA_EMBED_MODEL: str = "nomic-embed-text:latest"
+    OLLAMA_EMBED_MODEL: str = "snowflake-arctic-embed:33m"
 
     # Data base
     POSTGRES_URL: str
@@ -32,8 +32,8 @@ class Settings(BaseSettings):
         return self
 
     # Vector store
-    PGVECTOR_TABLE_NAME: str = "portfolio_vectors"
-    PGVECTOR_EMBED_DIM: int = 768
+    PGVECTOR_TABLE_NAME: str = "portfolio_vectors_v2"
+    PGVECTOR_EMBED_DIM: int = 384
 
     # App
     DATA_PATH: str = "./data"
